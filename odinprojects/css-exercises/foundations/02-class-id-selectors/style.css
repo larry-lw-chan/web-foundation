@@ -1,0 +1,23 @@
+.odd {
+    background-color: darksalmon;
+    font-family: 'Verdana', 'DejaVu Sans', 'sans-serif';
+}
+
+#two {
+    color: blue;
+    background-color: none;
+    background: none;
+    font-size: 36px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#three {
+    font-size: 24px;
+}
+
+#four {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: chartreuse;
+}

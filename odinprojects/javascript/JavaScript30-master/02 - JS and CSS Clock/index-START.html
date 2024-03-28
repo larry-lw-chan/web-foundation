@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS + CSS Clock</title>
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+<body>
+
+
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+
+
+  <style>
+    html {
+      background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
+      background-size: cover;
+      font-family: 'helvetica neue';
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border: 20px solid white;
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      padding: 2rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /* account for the height of the clock hands */
+    }
+
+    .hand {
+      width: 50%;
+      height: 6px;
+      background: black;
+      position: absolute;
+      top: 50%;
+    }
+
+  </style>
+    
+  <script>
+    function setClock() {
+      let now = new Date();
+      let second = now.getSeconds();
+      let minute = now.getMinutes();
+      let hour = now.getHours();
+      
+      // Function to spin the hour, min, sec hand
+      let spinHand = (handList) => {
+        
+        // Calculate Rotation
+        let rotation = (time, hand) => {
+          let rotateDeg = (hand[0] === '.hour-hand') ? 360/12 : 360/60; 
+          return (time * rotateDeg) + 90;
+        }
+        // Apply rototaion transformation to clock hand
+        for (let i = 0; i < handList.length; i++) {
+          let hand = document.querySelector(`${handList[i][0]}`);
+          let time = handList[i][1];
+          hand.style["transform"] = `rotate(${rotation(time, handList[i][0])}deg)`;
+          hand.style["transform-origin"] = `100% 50%`;          
+        }
+      }
+      spinHand([['.second-hand', second], ['.min-hand', minute], ['.hour-hand', hour]]);
+    }
+    
+    let myClock = setInterval(setClock, 1000);
+    setClock();
+
+  </script>
+</body>
+</html>

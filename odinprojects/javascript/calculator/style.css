@@ -1,0 +1,72 @@
+:root {
+    --background-color: #CCC;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#calculator {
+    width: 300px;
+    height: 485px;
+    border-radius: 10px;
+    background-color: rgb(40, 40, 40);
+    margin: 0 auto 2vh auto;
+    padding: 1.5rem;
+}
+
+#screen {
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(133, 125, 125);
+    margin: 20px auto 50px;
+    text-align: right;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+#screen #user-input {
+    font-size: 1.5rem;
+    color: greenyellow;
+}
+
+#screen #result {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+#keypads .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+}
+
+#keypads button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    border: none;
+}
+
+#keypads button:hover {
+    background-color: bisque;
+}
+
+#keypads button:hover:active {
+  background-color: burlywood;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#keypads button[name="equal"] {
+    width: 120px;
+    border-radius: 25px;
+}
+
+header, footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}

@@ -1,0 +1,75 @@
+:root {
+    --background-bg: #DDD;
+    --grid-bg: #FFF;
+}
+
+body {
+    background-color: var(--background-bg);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    text-align: center;
+    width: 100vw;
+}
+
+header h1 {
+    font-size: 4rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+}
+
+#menu {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#menu button, #menu input {
+    width: 15vw;
+    height: 5vh;
+}
+
+#menu button.active {
+    background-color: #333;
+    color: #fff;
+}
+
+#menu #color-picker {
+    width: 150px;
+    height: 150px;
+}
+
+#menu .slider p {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#grid {
+    flex: 5;
+}
+
+#grid-container {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    grid-template-columns: repeat(16, 1fr);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.grid-element {
+    background-color: var(--grid-bg);
+}
+

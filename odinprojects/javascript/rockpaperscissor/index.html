@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/eadc8f10c7.js" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    <header>
+        <div id="score" class="flex-item">
+            <span id="playerScore">Player Score: 0</span>
+            <span id="computerScore">Computer Score: 0</span>
+        </div>
+    </header>
+    <main>
+        <div id="computerChoice" class="flex-item">
+            <i class="fa-regular fa-hand-back-fist fa-7x"></i>
+            <i class="fa-regular fa-hand fa-7x"></i>
+            <i class="fa-regular fa-hand-scissors fa-7x"></i>
+        </div>
+        <div id="result" class="flex-item">
+            <h1>Rock Paper Scissor: Click to Start Game</h1>
+        </div>
+        <div id="player" class="flex-item">
+            <button id="rock" name="rock">
+                <i class="fa-regular fa-hand-back-fist fa-7x"></i>
+            </button>
+            <button id="paper" name="paper">
+                <i class="fa-regular fa-hand fa-7x"></i>
+            </button>
+            <button id="scissor" name="scissor">
+                <i class="fa-regular fa-hand-scissors fa-7x"></i>
+            </button>
+        </div>
+    </main>
+</body>
+</html>
