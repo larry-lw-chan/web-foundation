@@ -1,0 +1,61 @@
+body {
+    box-sizing: border-box;
+}
+
+main {
+    display:flex;
+    justify-content: center;
+}
+
+.container {
+    border: 1px solid grey;
+    padding: 15px;
+    width: 98%;
+    max-width: 500px;
+}
+
+h4 {
+    margin-top: 0;
+}
+
+#scoreboard {
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.red {
+    color: rgb(255, 0, 0);
+}
+
+.green {
+    color: rgb(0, 255, 0);
+}
+
+.blue {
+    color: rgb(0, 0, 255);
+}
+
+
+#scoreControl {
+    display: flex;
+}
+
+#scoreControl button {
+    padding: 5px;
+    flex: 110;
+    text-align: center;
+    color: white;
+    border: none;
+}
+
+#addScore1 {
+    background-color: green;
+}
+
+#addScore2 {
+    background-color: blue;
+}
+
+#scoreReset {
+    background-color: red;
+}

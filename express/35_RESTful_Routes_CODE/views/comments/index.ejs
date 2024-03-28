@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Index</title>
+</head>
+<body>
+    <style>
+        form {
+            display: inline;
+        }
+        .btn-link {
+            border: none;
+            outline: none;
+            background: none;
+            cursor: pointer;
+            color: #0000EE;
+            padding: 0;
+            text-decoration: underline;
+            font-family: inherit;
+            font-size: inherit;
+        }
+    </style>
+
+    <h2>Comment Index</h2>
+    <ul>
+       <% for (const c of comments) { %>
+            <li>
+                <%= c.comment %> - <strong><%= c.username %></strong> 
+                <a href="/comments/<%= c.id %>">Detail</a> |
+                <form action="/comments/<%= c.id %>?_method=DELETE"" method="post">
+                    <button type="submit" class="btn-link">Delete</button>
+                </form>                
+            </li>
+       <% } %> 
+    </ul>
+    <a href="./comments/new">New Comments</a>
+    
+</body>
+</html>
